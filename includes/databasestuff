@@ -6,7 +6,7 @@ try{
     $sql="Select song_id FROM songs";
     $sId = $pdo-> Query($sql);
     echo "<ul>";
-    while($row = $sId ->fetchAll()){
+    while($row = $sId ->fetch()){
         echo "<li>. $row[song_id] .</li>";
         $pdo = null;
     }
