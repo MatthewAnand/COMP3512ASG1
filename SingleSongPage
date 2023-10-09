@@ -1,0 +1,11 @@
+<?php
+require_once('databasestuff');
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+</head>
+<body>
+    echo songId();
+</body>    
+</html>
