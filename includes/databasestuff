@@ -8,9 +8,12 @@ try{
     echo "<ul>";
     while($row = $sId ->fetch()){
         echo "<li>. $row[song_id] .</li>";
-        $pdo = null;
     }
     echo "</ul>";
+    $pdo = null;
 }
+catch (PDOException $e){
+    die($e->getMessage());
+  }
 }
 ?>
