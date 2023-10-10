@@ -47,7 +47,7 @@ class DatabaseHelper {
             return $result->fetchAll(); 
             }  
 }
-Class SongDB{
+Class SongDatabase{
     private static $baseSQL = "SELECT  duration, title, songID, bpm, energy, danceability, liveness, valence, acousticness, speechiness, popularity,
      artistName, typeID, typeName, year, genreName FROM songs INNER JOIN genres ON songs.genreID = genres.genreID
     INNER JOIN artists ON songs.artistID = artists.artistID INNER JOIN types ON artists.artistTypeID = types.typeID";
@@ -165,7 +165,7 @@ Class SongDB{
             
         }
     }
-Class GenreDB{
+Class GenreDatabase{
     private static $baseSQL = "SELECT * FROM genres ORDER BY 'genreID'";
     public function __construct($connection) { 
         $this->pdo = $connection;
@@ -177,7 +177,7 @@ Class GenreDB{
             return $statement->fetchAll(); 
             }  
 }
-Class TypeDB{
+Class TypeDatabase{
     private static $baseSQL = "SELECT * FROM types ORDER BY 'typeID'";
     public function __construct($connection) { 
         $this->pdo = $connection;
