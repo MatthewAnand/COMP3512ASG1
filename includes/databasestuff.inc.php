@@ -8,7 +8,7 @@ try{
     $sId = $pdo-> Query($sql);
     echo "<ul>";
     while($row = $sId ->fetch()){
-        echo "<li>. $row[song_id] .</li>";
+        echo "<li>". $row['song_id'] ."</li>";
     }
     echo "</ul>";
     $pdo = null;
