@@ -1,5 +1,5 @@
 <?php
-require_once('databasestuff.inc.php');
+require_once('includes/databasestuff.inc.php');
 ?>
 <!DOCTYPE html>
 <html>
