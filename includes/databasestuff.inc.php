@@ -48,67 +48,67 @@ class DatabaseHelper {
             }  
 }
 Class SongDatabase{
-    private static $baseSQL = "SELECT  duration, title, songID, bpm, energy, danceability, liveness, valence, acousticness, speechiness, popularity,
+    private static $sql = "SELECT  duration, title, songID, bpm, energy, danceability, liveness, valence, acousticness, speechiness, popularity,
      artistName, typeID, typeName, year, genreName FROM songs INNER JOIN genres ON songs.genreID = genres.genreID
     INNER JOIN artists ON songs.artistID = artists.artistID INNER JOIN types ON artists.artistTypeID = types.typeID";
     public function __construct($connection) { 
         $this->pdo = $connection;
     }
     public function getAll() { 
-            $sql = self::$baseSQL; 
+            $sql = self::$sql; 
             $statement = DatabaseHelper::runQuery($this->pdo, $sql, null); 
             return $statement->fetchAll(); 
             } 
     public function getAllArtist($artistID){
-        $sql = self::$baseSQL . " WHERE artists.artistID=".$artistID." ORDER BY artistName"; 
+        $sql = self::$sql . " WHERE artists.artistID=".$artistID." ORDER BY artistName"; 
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
         null); 
         return $statement->fetchAll(); }
 
         public function getAllGenres($genreID){
-            $sql = self::$baseSQL . " WHERE genres.genreID=".$genreID." ORDER BY artistName"; 
+            $sql = self::$sql . " WHERE genres.genreID=".$genreID." ORDER BY artistName"; 
             $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
             null); 
             return $statement->fetchAll(); 
        }
        public function getAllID($songID){
-        $sql = self::$baseSQL . " WHERE songID=".$songID." ORDER BY artistName"; 
+        $sql = self::$sql . " WHERE songID=".$songID." ORDER BY artistName"; 
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
         null); 
         return $statement->fetchAll();   
     }
         public function getAllTitle($title){
-        $sql = self::$baseSQL . " WHERE title LIKE '".$title."' ORDER BY artistName"; 
+        $sql = self::$sql . " WHERE title LIKE '".$title."' ORDER BY artistName"; 
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
         null); 
         return $statement->fetchAll();   
         }
         public function getYearBig($year){
-            $sql = self::$baseSQL . " WHERE year >= ".$year." ORDER BY artistName"; 
+            $sql = self::$sql . " WHERE year >= ".$year." ORDER BY artistName"; 
             $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
             null); 
             return $statement->fetchAll();   
             }
             public function getYearSmall($year){
-                $sql = self::$baseSQL . " WHERE year <= ".$year." ORDER BY artistName"; 
+                $sql = self::$sql . " WHERE year <= ".$year." ORDER BY artistName"; 
                 $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
                 null); 
                 return $statement->fetchAll();   
                 }
             public function getPopBig($year){
-                $sql = self::$baseSQL . " WHERE popularity >= ".$year." ORDER BY artistName"; 
+                $sql = self::$sql . " WHERE popularity >= ".$year." ORDER BY artistName"; 
                 $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
                 null); 
                 return $statement->fetchAll();   
                 }
             public function getPopSmall($year){
-                $sql = self::$baseSQL . " WHERE popularity <= ".$year." ORDER BY artistName"; 
+                $sql = self::$sql . " WHERE popularity <= ".$year." ORDER BY artistName"; 
                 $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
                 null); 
                 return $statement->fetchAll();   
                 }
         public function SongSortTopPop(){
-            $sql = self::$baseSQL . " ORDER BY popularity ASC LIMIT 20"; 
+            $sql = self::$sql . " ORDER BY popularity ASC LIMIT 20"; 
                 $statement = DatabaseHelper::runQuery($this->pdo, $sql, 
                 null); 
                 return $statement->fetchAll();   
@@ -166,24 +166,24 @@ Class SongDatabase{
         }
     }
 Class GenreDatabase{
-    private static $baseSQL = "SELECT * FROM genres ORDER BY 'genreID'";
+    private static $sql = "SELECT * FROM genres ORDER BY 'genreID'";
     public function __construct($connection) { 
         $this->pdo = $connection;
     }
     public function getAll() { 
-            $sql = self::$baseSQL; 
+            $sql = self::$sql; 
             $statement = 
             DatabaseHelper::runQuery($this->pdo, $sql, null); 
             return $statement->fetchAll(); 
             }  
 }
 Class TypeDatabase{
-    private static $baseSQL = "SELECT * FROM types ORDER BY 'typeID'";
+    private static $sql = "SELECT * FROM types ORDER BY 'typeID'";
     public function __construct($connection) { 
         $this->pdo = $connection;
     }
     public function getAll() { 
-            $sql = self::$baseSQL; 
+            $sql = self::$sql; 
             $statement = 
             DatabaseHelper::runQuery($this->pdo, $sql, null); 
             return $statement->fetchAll(); 
