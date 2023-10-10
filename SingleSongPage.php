@@ -6,6 +6,7 @@ require_once('databasestuff.inc.php');
     <head>
 </head>
 <body>
-    echo songId();
+    <?php echo songId();
+    ?>
 </body>    
 </html>
