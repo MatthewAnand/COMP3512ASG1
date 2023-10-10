@@ -36,6 +36,14 @@ class DatabaseHelper {
     } 
    }
    
-  
-
-?>
+   Class ArtistDatabase{
+    private static $sql = "SELECT * FROM artists";
+    public function __construct($connection) { 
+        $this->pdo = $connection;
+    }
+    public function getAll() { 
+            $sql = self::$sql;  
+            $result = DatabaseHelper::runQuery($this->pdo, $sql, null); 
+            return $result->fetchAll(); 
+            }  
+}
