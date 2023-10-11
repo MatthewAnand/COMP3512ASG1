@@ -1,7 +1,7 @@
 <?php
 
-require_once 'config.inc.php';
-require_once 'databasestuff.inc.php';
+require_once 'includes/config.inc.php';
+require_once 'includes/databasestuff.inc.php';
 
 ?>
 
@@ -16,7 +16,7 @@ require_once 'databasestuff.inc.php';
 <p>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</p>  
 </header>
 <p>
-    <form method="get" action="Page - BrowseSearchResults.php">
+    <form method="get" action="Search.php">
     <input type="submit" value="Show All"> <br>
 </form>
     <?php

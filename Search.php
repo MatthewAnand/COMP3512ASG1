@@ -31,7 +31,7 @@ require_once 'includes/databasestuff.inc.php';
                 <fieldset> 
                 <legend><h1>Song Search</h1></legend> 
         
-                <form method="get" action = "Page - BrowseSearchResults.php" class="form">   
+                <form method="get" action = "Browse.php" class="form">   
                     <p>
             
                     <div > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
@@ -91,11 +91,11 @@ require_once 'includes/databasestuff.inc.php';
                 </ul>
             </div>
                 &emsp;&emsp;
-                
+                <input type="submit" value="Submit" class="button">
 
             </div>
-                    </p>
-                    <input type="submit" value="Submit" class="button">
+                    
+                    
         </fieldset>
 
                 
