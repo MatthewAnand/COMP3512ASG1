@@ -15,7 +15,7 @@ require_once 'includes/databasestuff.inc.php';
             <p>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</p>
             <nav>
 </header>   
- <ul id="nav">
+ <ul>
             <li><a href="Page - Favourites.php">Favourites</a></li> 
             <li><a href="Page - Home.php">Home</a></li>
 </ul>
@@ -63,7 +63,7 @@ require_once 'includes/databasestuff.inc.php';
                catch(PDOException $ex){
                    echo $ex;
                }
-                   // output all the retrieved galleries (hint: set value attribute of <option> to the GalleryID field)
+                   
                 ?>
              </select>
             </div>
