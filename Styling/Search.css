@@ -4,6 +4,14 @@ html{
     padding: 0;
     height: 100%;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    
+}
 header{
     width: 100%;
     background-color: black;
@@ -14,6 +22,15 @@ header{
     
 }
 
+form {
+    width: 40vw;
+    
+}
+
+select{
+    width: 100px;
+}
+
 header p{
     font-size: 40px;
     text-align: center;
@@ -22,30 +39,31 @@ header p{
 }
 
 header a {
-    
+    display: flex;
     font-size: 20px;
     text-align: center;
+    
     margin-left: 90px;
     margin-top: 0px;
     color: white;
     text-decoration: none;
+    font-weight: 600;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    
-}
+
 fieldset{
 
     border: none;
 }
 .container{
+    display: flex;
     background-image: url("https://www.rollingstone.com/wp-content/uploads/2022/12/Best-Songs-2022.jpg?w=1581&h=1054&crop=1");
-    height: 80%;
+    background-repeat: no-repeat;
+    height: 83%;
     margin-bottom: 0px;
     padding-bottom: 0;
+    width: 100%;
+
 }
 
 footer{

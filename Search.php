@@ -32,12 +32,12 @@ require_once 'includes/databasestuff.inc.php';
                 <legend><h1>Song Search</h1></legend> 
         
                 <form method="get" action = "Browse.php" class="form">   
-                    <p>
+                    
             
-                    <div > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
+                    <div class = "Title" > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
                 
                 
-                    <div ><input type = "radio" name = "choice" value = "artist"> <label for = "artists">Artist:</label></div>
+                    <div class="Artist" ><input type = "radio" name = "choice" value = "artist"> <label for = "artists">Artist:</label></div>
                     <select name="artists" id ="artists">
                         <option value='0'>             </option>  
                         <?php
