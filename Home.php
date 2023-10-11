@@ -7,7 +7,7 @@ require_once 'databasestuff.inc.php';
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link rel="stylesheet" href="Styling/Home.css">
     </head>
     <body>
     <header>
