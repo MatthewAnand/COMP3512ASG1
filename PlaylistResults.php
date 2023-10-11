@@ -21,7 +21,7 @@ require_once 'includes/databasestuff.inc.php';
 
 
 <?php
-$connstring = "sql:./music.db";
+$connstring = "mysql:./music.db";
 $conn = DatabaseHelper::createConnection(array($connstring));
 $test = new SongDatabase($conn);
     if ($_GET['Playlist'] == 'TopGenres'){
