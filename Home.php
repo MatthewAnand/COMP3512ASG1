@@ -1,7 +1,7 @@
 <?php
 
-require_once 'config.inc.php';
-require_once 'databasestuff.inc.php';
+require_once 'includes/config.inc.php';
+require_once 'includes/databasestuff.inc.php';
 
 ?>
 <!DOCTYPE html>
@@ -15,8 +15,8 @@ require_once 'databasestuff.inc.php';
 </header>
         <nav>
  <ul>
-            <li><a href="Page - Favourites.php">Favourites</a></li> 
-            <li><a href="Page - Search.php">Search</a></li>
+            <li><a href="Favourites.php">Favourites</a></li> 
+            <li><a href="Search.php">Search</a></li>
 </ul>
     <h1>Top Playlists</h1>
     <form method="GET" action = "Page - Playlist Results.php">

@@ -1,7 +1,8 @@
 header{
     width: 100%;
-    background-color: blue;
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 50%;
+    color: white;
 }
