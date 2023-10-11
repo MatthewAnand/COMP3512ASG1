@@ -7,20 +7,26 @@ require_once 'includes/databasestuff.inc.php';
 <!DOCTYPE html>
     <html>
         <head>
-            <link type="stylesheet"href ""
+            <link rel="stylesheet"href = "Styling/Search.css">
+            <title>COMP 3512 Assign1</title>
                         
         </head>
 
         <body>
             <header>
-            <p>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</p>
-            <nav>
-</header>   
- <ul>
-            <li><a href="Page - Favourites.php">Favourites</a></li> 
-            <li><a href="Page - Home.php">Home</a></li>
-</ul>
-        <fieldset> 
+                <p>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</p>
+                <nav>
+                    <ul>
+                        <li><a href="Page - Favourites.php">Favourites</a></li> 
+                        <li><a href="Page - Home.php">Home</a></li>
+                        <li><a href ="Page - PlaylistResults.php"/> </a> </li>
+                    </ul>
+                </nav>
+            
+            </header>   
+            
+        
+            <fieldset> 
          <legend><h1>Song Search</h1></legend> 
          <div>
             <form method="get" action = "Page - BrowseSearchResults.php" class="form">   
