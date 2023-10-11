@@ -20,7 +20,7 @@ require_once 'includes/databasestuff.inc.php';
                     <ul>
                         <a href="Favourites.php">Favourites</a>
                         <a href="Home.php">Home</a>
-                        <a href ="PlaylistResults.php"/> Playlists</a> 
+                        <a href ="PlaylistResults.php"> Playlists</a> 
                     </ul>
                 </nav>
             
@@ -47,7 +47,7 @@ require_once 'includes/databasestuff.inc.php';
                             $result = $test->getAll();
                             try{
                                 foreach($result as $row){
-                                    echo "<option value =".$row['artist_id'].">".$row['artist_name']."</option>";
+                                    echo "<option value =".$row['artistID'].">".$row['artistName']."</option>";
                                 }
                             }
                             catch(PDOException $ex){
@@ -62,13 +62,13 @@ require_once 'includes/databasestuff.inc.php';
                 <select name="genres" id ="genres">
                 <option value='0'>                   </option>  
                 <?php
-                $connstring = "sql:./music.db";
+                $connstring = "mysql:./music.db";
                 $conn = DatabaseHelper::createConnection(array($connstring));
                 $test = new GenreDatabase($conn);
                 $result = $test->getAll();
                try{
                   foreach($result as $row){
-                 echo "<option value =".$row['genre_id'].">".$row['genre_name']."</option>";
+                 echo "<option value =".$row['genreID'].">".$row['genreName']."</option>";
                 }
                }
                catch(PDOException $ex){
