@@ -1,6 +1,6 @@
 <?php
 
-require_once 'config.inc.php';
+require_once 'includes/config.inc.php';
 require_once 'includes/databasestuff.inc.php';
 
 ?>
@@ -25,8 +25,10 @@ require_once 'includes/databasestuff.inc.php';
             <form method="get" action = "Page - BrowseSearchResults.php" class="form">   
              <p>
             
-                <div ><label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
-                <div ><label for = "artists">Artist:</label>
+                <div > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
+                
+                
+                <div ><input type = "radio" name = "choice" value = "artist"> <label for = "artists">Artist:</label> 
                 <select name="artists" id ="artists">
                 <option value='0'>             </option>  
                 <?php
@@ -72,22 +74,15 @@ require_once 'includes/databasestuff.inc.php';
                
             <div>
                 <ul>
-                <label >Year</label><br><br>
+                <input type = "radio" name = "choice" value = "year"> <label >Year</label><br><br>
                     
-                  <label>Less Than </label><input type="text" name="YearSmall"><br>
-                  <label>Greater Than</label><input type="text" name="YearBig">
+                  <input type = "radio" name = "year" value = "less"/><label>Less Than </label><input type="text" name="YearSmall"><br>
+                  <input type = "radio" name = "year" value = "greater"/> <label>Greater Than</label><input type="text" name="YearBig">
                     
             </ul></div>
                 &emsp;&emsp;
                 
-               <div>
-                <ul>
-                    <label>Popularity</label><br><br>
-                    
-                    <label>Less Than</label><input type="text" name="PopSmall"><br>
-                    
-                    <label>Greater Than</label><input type="text" name="PopBig">
-            </ul></div>
+
             </div>
                     </p>
                     <input type="submit" value="Submit" class="button">
