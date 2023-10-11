@@ -1,10 +1,10 @@
 <?php
-require_once('config.inc.php');
+require_once('includes/config.inc.php');
 class DatabaseHelper { 
     /* Returns a connection object to a database */
     public static function createConnection( $values=array() ) { 
     $connString = $values[0]; 
-    $pdo = new PDO($connString); 
+    $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, 
     PDO::ERRMODE_EXCEPTION); 
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, 
