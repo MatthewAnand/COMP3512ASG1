@@ -7,6 +7,8 @@ require_once 'includes/databasestuff.inc.php';
 <!DOCTYPE html>
 <html>
 <head>
+            <meta charset="utf-8">
+            <title>COMP 3512 Assignment 1</title>
     
 </head>
 
@@ -23,7 +25,7 @@ require_once 'includes/databasestuff.inc.php';
 
 
 
-<div class="grid-container">
+<div>
 <div>
 <table>
             <tr>
@@ -144,7 +146,7 @@ if(isset($_GET['id'])){
     </div>
 </body>
 <footer>
-<p>COMP 3512|  &copy;  https://github.com/MatthewAnand  |  https://github.com/bharr102 </p>
+<p>COMP 3512  &copy;  https://github.com/MatthewAnand  |  https://github.com/bharr102 </p>
     </footer>
 
 </html>
