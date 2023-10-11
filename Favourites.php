@@ -113,8 +113,8 @@ else{
         ?>
             </table>
     </body>
+    
     <footer>
     <p>COMP 3512  &copy;  https://github.com/MatthewAnand  |  https://github.com/bharr102 </p>
-
     </footer>
 </html>

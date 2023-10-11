@@ -19,7 +19,7 @@ require_once 'includes/databasestuff.inc.php';
             <li><a href="Search.php">Search</a></li>
 </ul>
     <h1>Top Playlists</h1>
-    <form method="GET" action = "Page - Playlist Results.php">
+    <form method="GET" action = "Playlist Results.php">
     <div class="grid-container">
   <div class="grid-item" id="genre"><a href = "Page - Playlist Results.php?Playlist=TopGenres">Top Genres</a></div>
   <div class="grid-item" id="artist"><a href = "Page - Playlist Results.php?Playlist=TopArtists">Top Artists</a></div>

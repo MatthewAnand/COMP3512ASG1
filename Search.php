@@ -8,53 +8,55 @@ require_once 'includes/databasestuff.inc.php';
     <html>
         <head>
             <link rel="stylesheet"href = "Styling/Search.css">
-            <title>COMP 3512 Assign1</title>
+            <title>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</title>
+            <meta content="width=device-width,initial-scale=1.0"
                         
         </head>
 
         <body>
             <header>
-                <p>COMP 3512 Assignment 1 Ben Harris-Eze & Matthew Anand</p>
+                <p>Notes</p>
                 <nav>
                     <ul>
-                        <li><a href="Page - Favourites.php">Favourites</a></li> 
-                        <li><a href="Page - Home.php">Home</a></li>
-                        <li><a href ="Page - PlaylistResults.php"/> </a> </li>
+                        <a href="Favourites.php">Favourites</a>
+                        <a href="Home.php">Home</a>
+                        <a href ="PlaylistResults.php"/> Playlists</a> 
                     </ul>
                 </nav>
             
             </header>   
-            
+         
+        <div class = "container">
+            <main>
+                <fieldset> 
+                <legend><h1>Song Search</h1></legend> 
         
-            <fieldset> 
-         <legend><h1>Song Search</h1></legend> 
-         <div>
-            <form method="get" action = "Page - BrowseSearchResults.php" class="form">   
-             <p>
+                <form method="get" action = "Page - BrowseSearchResults.php" class="form">   
+                    <p>
             
-                <div > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
+                    <div > <input type = "radio" name = "choice" value = "title"> <label>Title:<input type="text" name="title" id="title" ></label></div><br><br>
                 
                 
-                <div ><input type = "radio" name = "choice" value = "artist"> <label for = "artists">Artist:</label> 
-                <select name="artists" id ="artists">
-                <option value='0'>             </option>  
-                <?php
-                $connstring = "sql:./music.db";
-                $conn = DatabaseHelper::createConnection(array($connstring));
-                $test = new ArtistDatabase($conn);
-                $result = $test->getAll();
-               try{
-                  foreach($result as $row){
-                 echo "<option value =".$row['artist_id'].">".$row['artist_name']."</option>";
-                }
-               }
-               catch(PDOException $ex){
-                   echo $ex;
-               }
+                    <div ><input type = "radio" name = "choice" value = "artist"> <label for = "artists">Artist:</label></div>
+                    <select name="artists" id ="artists">
+                        <option value='0'>             </option>  
+                        <?php
+                            $connstring = "sql:./music.db";
+                            $conn = DatabaseHelper::createConnection(array($connstring));
+                            $test = new ArtistDatabase($conn);
+                            $result = $test->getAll();
+                            try{
+                                foreach($result as $row){
+                                    echo "<option value =".$row['artist_id'].">".$row['artist_name']."</option>";
+                                }
+                            }
+                            catch(PDOException $ex){
+                                echo $ex;
+                            }
               
-                ?>
-            </select>
-            </div>
+                        ?>
+                    </select>
+            
             <div >
                 <label for = "genres">Genre:</label>
                 <select name="genres" id ="genres">
@@ -81,12 +83,13 @@ require_once 'includes/databasestuff.inc.php';
                
             <div>
                 <ul>
-                <input type = "radio" name = "choice" value = "year"> <label >Year</label><br><br>
+                    <input type = "radio" name = "choice" value = "year"> <label >Year</label><br><br>
                     
-                  <input type = "radio" name = "year" value = "less"/><label>Less Than </label><input type="text" name="YearSmall"><br>
-                  <input type = "radio" name = "year" value = "greater"/> <label>Greater Than</label><input type="text" name="YearBig">
+                    <input type = "radio" name = "year" value = "less"/><label>Less Than </label><input type="text" name="YearSmall"><br>
+                    <input type = "radio" name = "year" value = "greater"/> <label>Greater Than</label><input type="text" name="YearBig">
                     
-            </ul></div>
+                </ul>
+            </div>
                 &emsp;&emsp;
                 
 
@@ -96,14 +99,17 @@ require_once 'includes/databasestuff.inc.php';
         </fieldset>
 
                 
-        </form>   
+        </form>
+
+        </main>
+        
+        <footer>
+            <p>COMP 3512  &copy;  https://github.com/MatthewAnand  |   https://github.com/bharr102 </p>
+        </footer>
     </body>
 
     
-    <footer>
-    <p>COMP 3512  &copy;  https://github.com/MatthewAnand  |   https://github.com/bharr102 </p>
-
-    </footer>
+    
 
 
     </html>
